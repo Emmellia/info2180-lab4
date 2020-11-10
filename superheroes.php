@@ -65,8 +65,32 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php $queryFil=trim(filter_var($_GET['query'],FILTER_SANITIZE_STRING)); ?>
+
+
+<?php
+function fetchData($superheroes, $queryFil){
+    $found=false;
+    foreach($superheroes as $hero){
+        if($hero["alias"]===$queryFil || $hero["name"]===$queryFil){
+           echo"<h3>", $hero["alias"] ,"</h3>";
+           echo"<h4>","A.K.A"," ",$hero["name"],"</h4>";
+           echo"<p>", $hero["biography"],"</p>";
+           $found=true; 
+            }   
+
+        elseif($queryFil===""){
+           $line="<ul>"."<li>".$hero["alias"]."</li>"."</ul>";
+           echo $line;
+            }               
+    }
+
+        if($found===false && $queryFil!==""){
+        $color="red";
+        echo "<h3 style='color:{$color};'>","SUPERHEROE NOT FOUND","</h3>";
+        }
+
+}
+fetchData($superheroes, $queryFil);
+?>
+

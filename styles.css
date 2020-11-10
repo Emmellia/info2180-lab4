@@ -1,7 +1,75 @@
-h1{
-    font-weight: bolder;
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
+
+
 body{
-    background-color: gray;
+    background-color: lightgray;
+    margin:0;
+    padding: 0;
 }
+
+
+
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 200px;
+    padding-top: 40px;
+    font-size: 32px;
+
+}
+
+header{
+    display: flex;
+    background-color: cornflowerblue;
+    color: #ffffff;
+    align-items: center;
+    width:100%;
+    height: 20vh;
+    justify-content: center;
+    margin:0;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#srcInfo p{
+    margin-left: 200px;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-group input{
+    width:650px;
+    padding:10px;
+}
+
+form{
+    display: flex;
+    margin-left: 200px;
+    
+    
+}
+
+.btn{
+    background-color: red;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    margin-left:15px;
+    
+}
+
+
+hr{
+    margin: 0px 200px 0px 200px ;
+}
+
+#result{
+    margin-left: 200px;
+}
+
